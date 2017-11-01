@@ -1,0 +1,33 @@
+{
+  "name": "dropbox-digest-service",
+  "version": "1.0.0",
+  "description": "dropbox digest service",
+  "main": "dropbox-digest.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enmaso/dropbox-digest-service.git"
+  },
+  "keywords": [
+    "dropbox",
+    "nodejs",
+    "aws",
+    "sqs"
+  ],
+  "author": "Enmaso, Inc",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/enmaso/dropbox-digest-service/issues"
+  },
+  "homepage": "https://github.com/enmaso/dropbox-digest-service#readme",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "dotenv": "4.0.0",
+    "mongoose": "4.12.6"
+  },
+  "devDependencies": {
+    "standard": "10.0.3"
+  }
+}
