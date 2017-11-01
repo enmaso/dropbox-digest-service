@@ -23,9 +23,15 @@
   },
   "homepage": "https://github.com/enmaso/dropbox-digest-service#readme",
   "dependencies": {
+    "async": "2.5.0",
+    "aws-sdk": "2.142.0",
     "body-parser": "1.18.2",
     "dotenv": "4.0.0",
-    "mongoose": "4.12.6"
+    "gramophone": "0.0.3",
+    "mongoosastic": "4.3.0",
+    "mongoose": "4.12.6",
+    "request": "2.83.0",
+    "sqs-consumer": "3.8.0"
   },
   "devDependencies": {
     "standard": "10.0.3"
