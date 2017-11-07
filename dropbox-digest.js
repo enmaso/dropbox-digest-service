@@ -82,7 +82,10 @@ function processFile (message, done) {
               async.series([
                 function (next) {
                   // Extract file metadata with Tika
-                  exec(`curl -T ${tmp} ${TIKA_META} --header 'Accept: application/json'`, (err, stdout, stderr) => {
+                  let opts = {
+                    maxBuffer: 1024*1024*1024
+                  }
+                  exec(`curl -T ${tmp} ${TIKA_META} --header 'Accept: application/json'`, opts, (err, stdout, stderr) => {
                     if (err) {
                       console.error(err)
                     } else {
@@ -107,7 +110,10 @@ function processFile (message, done) {
                 },
                 function (next) {
                   // Extract file text with Tika
-                  exec(`curl -T ${tmp} ${TIKA_TEXT}`, (err, stdout, stderr) => {
+                  let opts = {
+                    maxBuffer: 1024*1024*1024
+                  }
+                  exec(`curl -T ${tmp} ${TIKA_TEXT}`, opts, (err, stdout, stderr) => {
                     if (err) {
                       console.error(err)
                     } else {
